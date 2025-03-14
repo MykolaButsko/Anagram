@@ -12,7 +12,7 @@
         tools:ignore="UselessParent">
 
         <EditText
-            android:id="@+id/enterText"
+            android:id="@+id/enterTextForAnagram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -24,7 +24,7 @@
             tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/enterSymbols"
+            android:id="@+id/enterSymbolsToIgnore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
