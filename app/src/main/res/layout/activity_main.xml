@@ -21,6 +21,7 @@
             android:hint="@string/enter_text_for_anagram"
             android:inputType="textMultiLine"
             android:minLines="2"
+            android:fontFamily="@font/mulish_regular"
             tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
 
         <EditText
@@ -32,6 +33,7 @@
             android:hint="@string/enter_symbols_to_ignore"
             android:inputType="textMultiLine"
             android:minLines="2"
+            android:fontFamily="@font/mulish_regular"
             tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
 
         <TextView
@@ -44,6 +46,7 @@
             android:minLines="2"
             android:text="@string/here_must_be_your_anagram"
             android:textSize="18sp"
+            android:fontFamily="@font/mulish_bold"
             tools:ignore="MissingConstraints,TextSizeCheck" />
 
         <Button
@@ -53,6 +56,7 @@
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/orange"
             android:text="@string/convert"
+            android:fontFamily="@font/mulish_bold"
             tools:ignore="MissingConstraints,TextContrastCheck" />
 
     </LinearLayout>
