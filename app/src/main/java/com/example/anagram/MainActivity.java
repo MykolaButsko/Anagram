@@ -26,5 +26,17 @@ public class MainActivity extends AppCompatActivity {
         enterSymbols = findViewById(R.id.enterSymbolsToIgnore);
         button = findViewById(R.id.convertButton);
         yourResult = findViewById(R.id.yourAnagram);
+
+        button.setOnClickListener(view -> {
+            String inputUser = enterText.getText().toString();
+            String ignoreSymbol = enterSymbols.getText().toString();
+
+            if (!inputUser.isEmpty()) {
+                String result = ReversWords.anagramOfWords(inputUser, ignoreSymbol);
+                yourResult.setText(result);
+            } else {
+                yourResult.setText(getString(R.string.here_must_be_your_anagram));
+            }
+        });
     }
 }
