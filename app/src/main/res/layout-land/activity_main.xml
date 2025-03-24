@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <EditText
+        android:id="@+id/enterTextForAnagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/mulish_regular"
         android:gravity="center"
-        android:orientation="vertical"
-        tools:ignore="UselessParent">
+        android:hint="@string/enter_text_for_anagram"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/enterTextForAnagram"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:hint="@string/enter_text_for_anagram"
-            android:inputType="textMultiLine"
-            android:minLines="2"
-            android:fontFamily="@font/mulish_regular"
-            tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
+    <EditText
+        android:id="@+id/enterSymbolsToIgnore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/mulish_regular"
+        android:gravity="center"
+        android:hint="@string/enter_symbols_to_ignore"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        app:layout_constraintEnd_toEndOf="@+id/enterTextForAnagram"
+        app:layout_constraintStart_toStartOf="@+id/enterTextForAnagram"
+        app:layout_constraintTop_toBottomOf="@+id/enterTextForAnagram" />
 
-        <EditText
-            android:id="@+id/enterSymbolsToIgnore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:hint="@string/enter_symbols_to_ignore"
-            android:inputType="textMultiLine"
-            android:minLines="2"
-            android:fontFamily="@font/mulish_regular"
-            tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
+    <TextView
+        android:id="@+id/yourAnagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/here_must_be_your_anagram"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/enterSymbolsToIgnore"
+        app:layout_constraintStart_toStartOf="@+id/enterSymbolsToIgnore"
+        app:layout_constraintTop_toBottomOf="@+id/enterSymbolsToIgnore" />
 
-        <TextView
-            android:id="@+id/yourAnagram"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:freezesText="true"
-            android:gravity="center"
-            android:minLines="2"
-            android:text="@string/here_must_be_your_anagram"
-            android:textSize="18sp"
-            android:fontFamily="@font/mulish_bold"
-            tools:ignore="MissingConstraints,TextSizeCheck" />
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/convert"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/yourAnagram"
+        app:layout_constraintStart_toStartOf="@+id/yourAnagram"
+        app:layout_constraintTop_toBottomOf="@+id/yourAnagram" />
 
-        <Button
-            android:id="@+id/convertButton"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/orange"
-            android:text="@string/convert"
-            android:fontFamily="@font/mulish_bold"
-            tools:ignore="MissingConstraints,TextContrastCheck" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
