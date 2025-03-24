@@ -14,4 +14,30 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void testAnagramOfWordsWithoutIgnoreSymbols() {
+        String testInput = "Mykola Android Developer 17";
+        String testOutput = "alokyM diordnA repoleveD 17";
+
+        assertEquals(testOutput, ReversWords.anagramOfWords(testInput, ""));
+    }
+
+    @Test
+    public void testAnagramOfWordsWithIgnoreSymbols() {
+        String testInput = "Mykola Android Developer 17";
+        String testIgnoreSymbols = "ka";
+        String testOutput = "lokyMa diordnA repoleveD 71";
+
+        assertEquals(testOutput, ReversWords.anagramOfWords(testInput, testIgnoreSymbols));
+    }
+
+    @Test
+    public void testAnagramOfWordsWithoutIgnoreSymbolsAndWords() {
+        String testInput = "";
+        String testIgnoreSymbols = "";
+        String testOutput = "";
+
+        assertEquals(testOutput, ReversWords.anagramOfWords(testInput, testIgnoreSymbols));
+    }
 }
